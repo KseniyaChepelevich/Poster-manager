@@ -14,5 +14,5 @@ public class Movie {
     private String movieName;
     private String genre;
     private String image;
-   // private boolean String premiereTomorrow;
+    // private boolean String premiereTomorrow;
 }

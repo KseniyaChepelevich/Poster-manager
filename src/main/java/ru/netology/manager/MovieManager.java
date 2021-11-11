@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.netology.domain.Movie;
 
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 //@Data
 
 public class MovieManager {
@@ -17,20 +17,20 @@ public class MovieManager {
         this.counterMovies = counterMovies;
 
     }
+
     public MovieManager() {
         this.counterMovies = 10;
     }
 
     public Movie[] getMovies() {
-        return null;
+        return findLastCountMovies();
     }
 
-    public Movie[] findLast10() {
+    public Movie[] findLastCountMovies() {
         int resultLength;
-        if (movies.length >= 10)
-        {
-            resultLength = 10;
-        } else{
+        if (movies.length >= counterMovies) {
+            resultLength = counterMovies;
+        } else {
             resultLength = movies.length;
         }
         Movie[] result = new Movie[resultLength];
@@ -42,16 +42,13 @@ public class MovieManager {
     }
 
     public void save(Movie item) {
-        int length = movies.length +1;
+        int length = movies.length + 1;
         Movie[] tmp = new Movie[length];
-        System.arraycopy(movies,0,tmp,0,movies.length);
+        System.arraycopy(movies, 0, tmp, 0, movies.length);
         int lastIndex = tmp.length - 1;
         tmp[lastIndex] = item;
         movies = tmp;
     }
 
-
-
-                     
 
 }
