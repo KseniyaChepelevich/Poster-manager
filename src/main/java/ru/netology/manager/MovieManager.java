@@ -35,7 +35,7 @@ public class MovieManager {
         }
         Movie[] result = new Movie[resultLength];
         for (int i = 0; i < resultLength; i++) {
-            int index = resultLength - i - 1;
+            int index = movies.length - i - 1;
             result[i] = movies[index];
         }
         return result;

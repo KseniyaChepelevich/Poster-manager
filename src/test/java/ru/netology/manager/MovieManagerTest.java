@@ -82,7 +82,7 @@ class MovieManagerTest {
         manager.save(tenth);
         manager.save(eleventh);
         Movie[] actual = manager.getMovies();
-        Movie[] expected = new Movie[]{eleventh,tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
+        Movie[] expected = new Movie[]{eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
 
         assertArrayEquals(expected, actual);
     }
@@ -145,7 +145,7 @@ class MovieManagerTest {
         manager.save(tenth);
         manager.save(eleventh);
         Movie[] actual = manager.getMovies();
-        Movie[] expected = new Movie[]{eleventh,tenth, ninth, eighth, seventh};
+        Movie[] expected = new Movie[]{eleventh, tenth, ninth, eighth, seventh};
 
         assertArrayEquals(expected, actual);
     }
